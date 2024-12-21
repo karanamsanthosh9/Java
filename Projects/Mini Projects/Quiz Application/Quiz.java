@@ -5,7 +5,9 @@ class Quiz
     {
         System.out.println("Welcome to Quiz Application");
         QuestionHandler qh = new QuestionHandler();
-        
+        qh.startQuiz();
+        System.out.println("Quiz is completed....publishing the results now");
+        qh.publishResults();
     }
 
 }
