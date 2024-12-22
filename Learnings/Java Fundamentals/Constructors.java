@@ -19,6 +19,6 @@ class Main
        Constructors c = new Constructors();
        c.doSomething();
         
-       DataTypes d = new DataTypes();
+       //DataTypes d = new DataTypes();
     }
 }

@@ -1,6 +1,6 @@
 
 
-class AnonymousInnerClassDemo
+public class AnonymousInnerClassDemo
 {
     public void printWelcomenote()
     {
@@ -8,7 +8,7 @@ class AnonymousInnerClassDemo
     }
 }
 
-class Executer
+class AnonymousInnerClassDemo_Handler
 {
     public static void main(String[] a )
     {
@@ -24,5 +24,7 @@ class Executer
 
         }
         ;
+
+        anObj.printWelcomenote();
     }
 }

@@ -24,7 +24,7 @@ class OuterClass
         }
         public void printclassDetails_2()
         {
-            className = "InnerClass"
+            className = "InnerClass";
             System.out.println("Printing class details : " +  className );
         }
     }
@@ -42,6 +42,7 @@ class Implementation
         //obj1.printclassDetails_2(); --> error....cant call innerClass members/methods with outer class ref var.
         
         //InnerClass obj2 = new InnerClass(); -> error...innerClass needs outerclass obj to be created(if it is non-static method/member)
-        OuterClass.InnerClass obj2 = obj1.InnerClass();
+        OuterClass.InnerClass obj2 = obj1.new InnerClass();
+        obj2.printclassDetails_2();
     }
 }
