@@ -17,6 +17,11 @@ public class EnumDemo
         ResponseCodes resp = ResponseCodes.Success;
         System.out.println(resp);
         System.out.println(resp.ordinal()) ; //prints the index of the enum beeing assigned.
-        
+
+        ResponseCodes res[] = ResponseCodes.values(); //assigns all values as array
+        for(ResponseCodes ir : res)
+            {
+                System.out.println(ir + " : " + ir.ordinal());
+            }
     }
 }
