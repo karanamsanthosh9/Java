@@ -1,7 +1,7 @@
 
 enum ResponseCodes
 {
-    Ruccess,
+    Success,
     ParsingError ,
     SystemFailure 
 }

@@ -1,4 +1,4 @@
-enum ResponseCodes
+enum RespCodes
 {
     Success,
     Failure,
@@ -6,13 +6,11 @@ enum ResponseCodes
     SystemError
 }
 
-
-
 public class EnumDemo2
 {
     public static void main(String args[])
     {
-        ResponseCodes resp = ResponseCodes.Success;
+        RespCodes resp = RespCodes.Success;
 
         switch (resp) {
             case Success:
