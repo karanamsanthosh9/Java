@@ -1,20 +1,20 @@
 
 enum ResponseCodes
 {
-    success,
-    parsingError ,
-    systemFailure 
+    Ruccess,
+    ParsingError ,
+    SystemFailure 
 }
 
 public class EnumDemo
 {    
     public static void main(String args[])
     {    
-        System.out.println(ResponseCodes.success);
-        System.out.println(ResponseCodes.parsingError);
-        System.out.println(ResponseCodes.systemFailure);
+        System.out.println(ResponseCodes.Success);
+        System.out.println(ResponseCodes.ParsingError);
+        System.out.println(ResponseCodes.SystemFailure);
 
-        ResponseCodes resp = ResponseCodes.success;
+        ResponseCodes resp = ResponseCodes.Success;
         System.out.println(resp);
         System.out.println(resp.ordinal()) ; //prints the index of the enum beeing assigned.
         
