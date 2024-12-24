@@ -10,6 +10,7 @@ public class EnumDemo
 {    
     public static void main(String args[])
     {    
+        
         System.out.println(ResponseCodes.Success);
         System.out.println(ResponseCodes.ParsingError);
         System.out.println(ResponseCodes.SystemFailure);
