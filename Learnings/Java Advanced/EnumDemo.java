@@ -1,6 +1,10 @@
+enum ResponseCodes
+{
+    Success,
+    ParsingError,
+    SystemFailure
+}
 
-<<<<<<< HEAD
-=======
 public class EnumDemo
 {    
     public static void main(String args[])
@@ -20,5 +24,4 @@ public class EnumDemo
                 System.out.println(ir + " : " + ir.ordinal());
             }
     }
->>>>>>> 5128a67e096e4675973aeaa6072cf71a64eddd9d
 }
