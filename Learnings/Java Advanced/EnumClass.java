@@ -7,5 +7,5 @@ enum enum_1
 
 public class EnumClass
 {
-
+    pu
 }
