@@ -15,7 +15,7 @@ function gitcommit {
    # echo "File ${filename_to_commit} commit failed"
 
     # Push the committed file to the remote repository
-    git push origin master 
+    git push 
     #git push origin master && \
     #echo "File ${filename_to_commit} pushed successfully" || \
     #echo "File ${filename_to_commit} push failed"
