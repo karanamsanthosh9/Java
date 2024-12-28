@@ -1,17 +1,19 @@
 public class Practice
 {
-    void F1()
+    class InnerClass
     {
-        System.out.println("this.name()" + this.name());
+        void f1()
+        {
+            System.out.println("f1()");
+        }
+        void f2()
+        {
+            System.out.println("f2()");
+        }
     }
 }
 
-
-class Practice_Handler
+final class Handler
 {
-    public static void main(String args[])
-    {
-        System.out.println("main");
-        //call
-    }
+    
 }
