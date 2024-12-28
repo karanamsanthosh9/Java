@@ -15,13 +15,14 @@ public class Practice
         System.out.println("AnonymousCalss demo");
         Practice p = new  Practice()
         {
-            
+
             String  favouriteColor = "Green";
              public void getFavouriteColour()
             {
                 System.out.println(this.favouriteColor);
             }
         };
-        p.getFavouriteColour();
+        System.out.println(p.favouriteColor);//blue
+        p.getFavouriteColour();//green
     }
 }
