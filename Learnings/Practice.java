@@ -1,35 +1,27 @@
 public class Practice
 {
-    void f1()
+    String favouriteColor ="Blue" ;
+    public void getFavouriteColour()
     {
-        System.out.println("Practice f1()");
+        System.out.println(this.favouriteColor);
+    }
 
-    }
-    void f2()
-    {
-        System.out.println("Practice f2()");
-    }
-    class InnerClass
-    {
-        void f1()
-        {
-            System.out.println("f1()");
-        }
-        void f2()
-        {
-            System.out.println("f2()");
-        }
-    }
 }
 
-final class Handler
+ class Handler
 {
     public static void main(String ar[])
     {
-        System.out.println("Main");
-        //ok
-        Practice p = new Practice();
-        Practice.InnerClass ic =p.new InnerClass();
-        ic.f1();
+        System.out.println("AnonymousCalss demo");
+        Practice p = new  Practice()
+        {
+            
+            String  favouriteColor = "Green";
+             public void getFavouriteColour()
+            {
+                System.out.println(this.favouriteColor);
+            }
+        };
+        p.getFavouriteColour();
     }
 }
