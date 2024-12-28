@@ -28,6 +28,7 @@ class Question
         this.markedOption = sc.next().charAt(0);
         this.correctAnswer = this.questionId % 2 == 0 ? 'a' :'b';
        // System.out.println("correct ans is : " + this.correctAnswer);
+       sc.close();
     }
     
     public boolean evaluateQuestion(Question q)
