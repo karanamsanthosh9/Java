@@ -15,6 +15,7 @@ function gitcall {
 	read -p "Enter the commit comments: " commit_comments
 		git commit -a -m "${commit_comments}"
 		git push
+		
 }
 
 
