@@ -15,5 +15,9 @@ public class Practice
 
 final class Handler
 {
-    
+    public static void main(String ar[])
+    {
+        System.out.println("Main");
+        //ok
+    }
 }
