@@ -1,11 +1,15 @@
+
+enum Laptop{
+    Windows, Mac, Linux;
+
+    private Laptop()
+    {
+
+    }
+}
+
 public class Practice
 {
-    String favouriteColor ="Blue" ;
-    public void getFavouriteColour()
-    {
-        System.out.println(this.favouriteColor);
-    }
-
 }
 
  class Handler
@@ -26,6 +30,6 @@ public class Practice
         p.getFavouriteColour();//green
         //test git commit
 
-        
+
     }
 }
