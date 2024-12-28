@@ -1,2 +1,7 @@
-git commit $1 -m $2
-git push
+echo "Enter filename to commit"
+read filename
+echo "Enter the commit comments"
+read comments
+echo "you have entered ${comments}"
+git commit ${filename} -m ${comments}
+#git push
