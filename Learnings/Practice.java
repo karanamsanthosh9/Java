@@ -1,5 +1,14 @@
 public class Practice
 {
+    void f1()
+    {
+        System.out.println("Practice f1()");
+
+    }
+    void f2()
+    {
+        System.out.println("Practice f2()");
+    }
     class InnerClass
     {
         void f1()
@@ -19,5 +28,8 @@ final class Handler
     {
         System.out.println("Main");
         //ok
+        Practice p = new Practice();
+        Practice.InnerClass ic =p.new InnerClass();
+        ic.f1();
     }
 }
