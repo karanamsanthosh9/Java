@@ -9,13 +9,15 @@ alias gitcall='git commit -a -m "Commit changes."'
 function gitcommit {
     read -p "Enter the file name to commit: " filename_to_commit
     read -p "Enter the commit comments: " commit_comments
-    git commit ${filename_to_commit} -m "${commit_comments}" && \
-    echo "File ${filename_to_commit} committed successfully" || \
-    echo "File ${filename_to_commit} commit failed"
+    git commit ${filename_to_commit} -m "${commit_comments}" 
+   # git commit ${filename_to_commit} -m "${commit_comments}" && \
+   # echo "File ${filename_to_commit} committed successfully" || \
+   # echo "File ${filename_to_commit} commit failed"
 
     # Push the committed file to the remote repository
-    git push origin master && \
-    echo "File ${filename_to_commit} pushed successfully" || \
-    echo "File ${filename_to_commit} push failed"
+    git push origin master 
+    #git push origin master && \
+    #echo "File ${filename_to_commit} pushed successfully" || \
+    #echo "File ${filename_to_commit} push failed"
 }
 
