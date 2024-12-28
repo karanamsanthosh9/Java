@@ -32,3 +32,4 @@ echo "File ${filename_to_commit} push failed"
 fi
 
 }
+
