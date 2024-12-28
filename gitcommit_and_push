@@ -1,0 +1,2 @@
+git commit $1 -m $2
+git push
