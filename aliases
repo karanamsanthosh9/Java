@@ -2,22 +2,18 @@
 #!/bin/bash
 
 alias lk='ls -lart'
-alias cdd='cd -'
-
-alias gitcall='git commit -a -m "Commit changes."'
+alias cdd='cd ..'
 
 function gitcommit {
-    read -p "Enter the file name to commit: " filename_to_commit
-    read -p "Enter the commit comments: " commit_comments
-    git commit ${filename_to_commit} -m "${commit_comments}" 
-   # git commit ${filename_to_commit} -m "${commit_comments}" && \
-   # echo "File ${filename_to_commit} committed successfully" || \
-   # echo "File ${filename_to_commit} commit failed"
-
-    # Push the committed file to the remote repository
-    git push 
-    #git push origin master && \
-    #echo "File ${filename_to_commit} pushed successfully" || \
-    #echo "File ${filename_to_commit} push failed"
+	read -p "Enter the file name to commit: " filename_to_commit
+		read -p "Enter the commit comments: " commit_comments
+		git commit ${filename_to_commit} -m "${commit_comments}" 
+		git push 
+}
+function gitcall {
+	echo 	"Committing all changes in the current directory"
+	read -p "Enter the commit comments: " commit_comments
+		git commit -a -m "${commit_comments}"
+		git push
 }
 
