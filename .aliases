@@ -3,9 +3,10 @@
 
 alias lk='ls -lart'
 alias cdd='cd -'
-alias gitcommit='/workspaces/Java/gitcommit_and_push'
 
-git commit -a -m "${commit_comments}"
+alias gitcall='git commit -a -m "Commit changes."'
+
+
 
 function gitcommit
 {
