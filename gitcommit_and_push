@@ -3,5 +3,5 @@ read filename
 echo "Enter the commit comments"
 read comments
 echo "you have entered ${comments}"
-git commit ${filename} -m ${comments}
+git commit ${filename} -m "${comments}"
 #git push
