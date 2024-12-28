@@ -1,9 +1,0 @@
-echo "Enter filename to commit"
-read filename
-echo "Enter the commit comments"
-read comments
-echo "you have entered ${comments}"
-git commit ${filename} -m "${comments}"
-echo "Git commit done"
-git push
-echo "Git push done"

@@ -1,0 +1,33 @@
+
+
+
+alias lk='ls -lart'
+alias cdd='cd -'
+alias gitcommit='/workspaces/Java/gitcommit_and_push'
+
+git commit -a -m "${commit_comments}"
+
+function gitcommit
+{
+echo "Enter the file name to commit"
+read filename_to_commit
+echo "Enter the commit comments"
+read commit_comments
+git commit ${filename_to_commit} -m "${commit_comments}"
+if( $? -eq 0 )
+then
+echo "File ${filename_to_commit} committed successfully"
+else
+echo "File ${filename_to_commit} commit failed"
+fi
+
+#below command will push the committed file to the remote repository, origin is the remote repository name and master is the branch name
+git push origin master
+if( $? -eq 0 )
+then
+echo "File ${filename_to_commit} pushed successfully"
+else
+echo "File ${filename_to_commit} push failed"
+fi
+
+}
