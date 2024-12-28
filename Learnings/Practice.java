@@ -25,5 +25,6 @@ public class Practice
         System.out.println(p.favouriteColor);//blue
         p.getFavouriteColour();//green
         //test git commit
+        
     }
 }
