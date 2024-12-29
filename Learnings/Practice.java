@@ -8,8 +8,10 @@ enum Laptop{
     }
 }
 
-public class Practice
+public abstract class Practice
 {
+    String favouriteColor;
+     abstract void getFavouriteColour();
 }
 
  class Handler
@@ -29,7 +31,5 @@ public class Practice
         System.out.println(p.favouriteColor);//blue
         p.getFavouriteColour();//green
         //test git commit
-
-
     }
 }
