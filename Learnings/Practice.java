@@ -23,6 +23,7 @@ public abstract class Practice
         {
 
             String  favouriteColor = "Green";
+            String eww = "fsd";
              public void getFavouriteColour()
             {
                 System.out.println(this.favouriteColor);
