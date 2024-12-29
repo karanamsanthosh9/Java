@@ -23,6 +23,7 @@ public interface LambdaExpressionDemo
         //void newfunc(); shows error in interface name , as only one method allowed in FunctionalInterface
 }
 
+@FunctionalInterface
 interface LambdaExpressionDemo2 {
 
         void show2(int i);
@@ -40,6 +41,7 @@ class LambdaExpressionDemo_Handler
         handler.usage1();
         handler.usage2();
         handler.usage3();
+        handler.usage4();
     }
 
     void usage1()
@@ -66,5 +68,20 @@ class LambdaExpressionDemo_Handler
             System.out.println("in basic lambda implementation");
         };
         obj.show();
+
+        //what if the single abstract method accepts parameters?, lets see
+        LambdaExpressionDemo2 obj2 = (int i) ->{
+            System.out.println("in parameterised Lambda expression : " + i);
+        };
+        obj2.show2(18);
+        //as compiler already know it accepts int, we can directly use this
+        //LambdaExpressionDemo2 obj2 = i -> { System.out.println("in parameterised Lambda expression : " + i); }
+
+    }
+    void usage4()
+    { 
+        //even reduce code
+        LambdaExpressionDemo2 obj2 = i ->System.out.println("in parameterised Lambda expression : " + i);
+        obj2.show2(99);
     }
 }
