@@ -30,26 +30,27 @@ interface LambdaExpressionDemo2 {
 
 }
 
-
-
+@FunctionalInterface
+interface InterfaceWithReturnValue{
+    int add(int p1, int p2);
+}
 
 class LambdaExpressionDemo_Handler
 {
     public static void main(String[] args) {
         //i want to use LambdaExpressionDemo, but it is an interface, so , i have to implement it in a class and have to use, instead of that i can use anonymous class
         LambdaExpressionDemo_Handler handler = new LambdaExpressionDemo_Handler();
-        handler.usage1();
-        handler.usage2();
-        handler.usage3();
-        handler.usage4();
+        handler.lambdaExpressions_usage1();
+        handler.lambdaExpressions_usage2();
+        handler.lambdaExpressions_usage3();
+        handler.lambdaExpressions_usage4();
+        handler.demoFor_InterfaceWithReturnValue();
     }
-
-    void usage1()
+    void lambdaExpressions_usage1()
     {
        //LambdaExpressionDemo obj  = new LambdaExpressionDemo(); error, cant create obj with interface directly;
     }
-
-    void usage2()
+    void lambdaExpressions_usage2()
     {
         LambdaExpressionDemo obj = new LambdaExpressionDemo() 
         {
@@ -61,7 +62,7 @@ class LambdaExpressionDemo_Handler
         };
         obj.show();
     }
-    void usage3()
+    void lambdaExpressions_usage3()
     {
         //lambda expression
         LambdaExpressionDemo obj = () ->{
@@ -78,10 +79,28 @@ class LambdaExpressionDemo_Handler
         //LambdaExpressionDemo2 obj2 = i -> { System.out.println("in parameterised Lambda expression : " + i); }
 
     }
-    void usage4()
+    void lambdaExpressions_usage4()
     { 
         //even reduce code
         LambdaExpressionDemo2 obj2 = i ->System.out.println("in parameterised Lambda expression : " + i);
         obj2.show2(99);
+    }
+    void demoFor_InterfaceWithReturnValue()
+    {
+        System.out.println("Demo for InterfaceWithReturnValue");
+        InterfaceWithReturnValue obj = new InterfaceWithReturnValue() 
+        {
+            public int add(int j, int k )
+            {
+                return  j + k;
+            }
+        };
+        System.out.println(obj.add(12312, 32112));
+
+        //InterfaceWithReturnValue obj2 = (int i , int k) -> return i + k ; //error, return cant be in single line
+        //InterfaceWithReturnValue obj2 = (int i , int k) -> {return i + k ;}; //this is valid, but we have better one🙂🙂🙂
+        System.out.println("🙂🙂🙂");
+        InterfaceWithReturnValue obj2 = (a, b) -> (a + b);
+        System.out.println(obj2.add(99,100));
     }
 }
