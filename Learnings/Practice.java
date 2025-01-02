@@ -1,5 +1,6 @@
 
 
+
 abstract class Practice_Abstract
 {
     void demo()
@@ -24,5 +25,14 @@ public class Practice {
         Practice_Abstract ob = new Extended_Practice();
         ob.demo();
         ob.demo2();
+
+        Practice_Abstract anonyObj = new Practice_Abstract()
+        {
+            void  demo2()
+            {
+                System.out.println("ano");
+            }
+        };
+        anonyObj.demo();
     }     
 }
