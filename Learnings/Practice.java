@@ -1,5 +1,20 @@
+interface Actions_interface
+{
+    void run();
+    void dance();
+}
 
-
+class Implementor_of_inteface implements Actions_interface
+{
+    public void run()
+    {
+        System.out.println("Running");
+    }
+    public void dance()
+    {
+        System.out.println("dancing");
+    }
+}
 
 abstract class Practice_Abstract
 {
@@ -34,5 +49,14 @@ public class Practice {
             }
         };
         anonyObj.demo();
+        Implementor_of_inteface obj2 = new Implementor_of_inteface();
+        obj2.dance();
+        obj2.run();
+
+        System.out.println("check");
+        double d = 6.00/4.00;
+        int  i = 6/4;
+        double res = d + i;
+        System.out.println(res);
     }     
 }
