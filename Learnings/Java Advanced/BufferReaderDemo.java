@@ -5,6 +5,7 @@ import java.io.IOException;
 //import java.util.Scanner;
 public class BufferReaderDemo {
 
+    
     static void demo() throws IOException {
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
