@@ -14,7 +14,7 @@ public class BufferReaderDemo {
         System.out.println(str);
         System.out.println("toLowerCase :" + str.toLowerCase());
         System.out.println("toUpperCase:" + str.toUpperCase());
-
+        b.close();//it suggested to close the resources always.
         if (str.equals("throw"))
             throw new IOException("Throwing custom exception");
         else    
