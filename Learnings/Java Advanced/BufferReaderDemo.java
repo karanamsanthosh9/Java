@@ -5,16 +5,16 @@ import java.io.IOException;
 //import java.util.Scanner;
 public class BufferReaderDemo {
 
-    
+    static InputStreamReader inp = new InputStreamReader(System.in);
+    static BufferedReader b = new BufferedReader(inp);
+
     static void demo() throws IOException {
-        InputStreamReader inp = new InputStreamReader(System.in);
-        BufferedReader b = new BufferedReader(inp);
+       
         System.out.print("Enter something :");
         String str = b.readLine();
         System.out.println(str);
-        System.out.println("toLowerCase :" + str.toLowerCase());
-        System.out.println("toUpperCase:" + str.toUpperCase());
         b.close();//it suggested to close the resources always.
+        //resource/connections to DB closing should be in final block...
         if (str.equals("throw"))
             throw new IOException("Throwing custom exception");
         else    
