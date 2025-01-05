@@ -2,7 +2,7 @@ class Counter implements Runnable
 {
 
     int counter;
-   // public void increment()
+   // public void increment() //
     public synchronized void increment() //synchronized - almost like mutex lock
     {
         for (int i = 0; i < 100000; i++) {
