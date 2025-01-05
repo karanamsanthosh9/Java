@@ -30,7 +30,8 @@ public class ThreadBasics {
         System.out.println("Main");
         A_ThreadBasics ob_a = new A_ThreadBasics();
         B_ThreadBasics ob_b = new B_ThreadBasics();
+        System.out.println(ob_a.getPriority());// we can only suggest scheduler , but can't exactly tell to maintain exact priority
         ob_a.start();//this will directly calls the run method
-        ob_b.start();
+        ob_b.start();   
     }
-}
+}                             
