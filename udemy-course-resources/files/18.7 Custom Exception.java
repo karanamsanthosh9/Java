@@ -1,5 +1,6 @@
 class NavinException extends Exception
 {
+
 	public NavinException(String string)
 	{
 		super(string);
