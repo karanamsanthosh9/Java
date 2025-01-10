@@ -28,7 +28,15 @@ public class CollectionsDemo1 {
          * Main
          * [1, 12, 412]
          */
+        Collection<Integer> c = new ArrayList<Integer>(); //<> - are called generics.....
+        c.add(122);
+        c.add(123);
+        c.add(124);
+        //System.out.println(c);
+        for(int i : c)
+        {
+            System.out.println(i);
+        }
 
-         
     }
 }
