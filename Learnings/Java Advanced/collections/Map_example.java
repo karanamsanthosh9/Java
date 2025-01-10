@@ -2,11 +2,8 @@
 
 import java.util.HashMap;
 import java.util.Hashtable;
-import java.util.Iterator;
 import java.util.Map;
 
-import javax.naming.InterruptedNamingException;
-import javax.print.attribute.HashAttributeSet;
 
 //key is unique, its value can be updated
 public class Map_example {
