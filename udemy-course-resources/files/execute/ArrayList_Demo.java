@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class ArrayList_Demo{
+public class ArrayList_Demo {
     public static void main(String[] args){   
     	
 //    	Collection<Integer> nums= new ArrayList<Integer>();
