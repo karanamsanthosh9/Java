@@ -36,7 +36,9 @@ class Extended_Practice extends Practice_Abstract
 public class Practice {
 
     public static void main(String[] args) {
-        System.out.println("Main");
+
+        System.out.println("Main, trying ");        
+        java.awt.Toolkit.getDefaultToolkit().beep();
         Practice_Abstract ob = new Extended_Practice();
         ob.demo();
         ob.demo2();

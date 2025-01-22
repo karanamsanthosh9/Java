@@ -5,3 +5,12 @@ alias lk='clear && ls -lart'
 alias cdd='cd ..'
 alias md='mkdir -p'
 
+function show
+{
+
+    echo HOME      : $HOME
+    echo JAVA_HOME : $JAVA_HOME
+    echo MAVEN_HOME: $MAVEN_HOME
+    echo default maven local repos => ~/.m2
+
+}
