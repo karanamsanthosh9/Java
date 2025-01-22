@@ -14,3 +14,8 @@ function show
     echo default maven local repos => ~/.m2
 
 }
+
+function show_maven_info
+{
+    //
+}
