@@ -5,6 +5,8 @@ import java.sql.*;
 
 import javax.swing.plaf.basic.BasicInternalFrameTitlePane.RestoreAction;
 
+import org.postgresql.core.SqlCommand;
+
 /*
  * steps in jdbc:
  * 1. import packages  ->import java.sql.*;
@@ -17,7 +19,7 @@ import javax.swing.plaf.basic.BasicInternalFrameTitlePane.RestoreAction;
  */
 public class Main {
 
-    static void demo1(Connection con) throws SQLException {
+    static void select_single_record(Connection con) throws SQLException {
         
         Statement st = con.createStatement(); //create statement
         String sql = "select model from cars where brand='Tata'";
@@ -38,23 +40,41 @@ public class Main {
         System.out.println("connection closed");
     }
 
-    static void demo2(Connection con) throws SQLException
+    static void select_all_records(Connection con) throws SQLException
     {
         //printing all records
         System.out.println("Lets print all records");
         Statement st = con.createStatement(); //create statement
         String sql = "select * from cars";
-        
+
         ResultSet res =  st.executeQuery(sql);
         while (res.next()) {
             System.out.print(res.getString(1) + " ");
             System.out.print(res.getString(2) + " ");
             System.out.println(res.getInt(3));
-
         }
     }
+    static void insert_record(Connection con, String insertquery) throws SQLException
+    {
+        System.out.println("inserting record into cars table");
+        Statement st = con.createStatement();
+        st.execute(insertquery);
+        
+    }
 
-    public static void main(String[] args) throws SQLException {
+    static void insert_using_preparedStatement(Connection con, String brand, String model, int year) throws SQLException
+    {
+        System.out.println("insert_using_preparedStatement");
+        String sql = "insert into cars values(? , ? ,?)";
+        PreparedStatement ps = con.prepareStatement(sql);
+        ps.setString(1,brand );
+        ps.setString(2,  model);
+        ps.setInt(3, year);
+        ps.executeQuery();
+
+    }
+
+    public static void main(String[] args){
         System.out.println("Hello world!");
         try{Class.forName("org.postgresql.Driver");} //optioanl
         catch(Exception e) { System.out.println("Hey got exception : " + e.getMessage());}
@@ -63,14 +83,24 @@ public class Main {
         String uname = "postgres";
         String pass = "password";
         
-        Connection con  = DriverManager.getConnection(url, uname, pass); //create connection
-        System.out.println("connection established");
-        
-        // demo1(con);
-        demo2(con);
+ 
+        try 
+        {
+            Connection con  = DriverManager.getConnection(url, uname, pass); //create connection
+            System.out.println("connection established");
+        // select_single_record(con);
+        // select_all_records(con);
 
+        //String insertquery = "insert into cars values('Mahindra', 'Thar', 2010)";
+        //insert_record(con, insertquery);
+
+        insert_using_preparedStatement(con, "somebrand2", "somemodel2", 2022);
 
         con.close();
+        }catch(SQLException E)
+        {
+            System.out.println("got sql exception : " + E.getMessage());
+        }
         
     }
 }
