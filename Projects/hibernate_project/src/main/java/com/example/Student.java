@@ -1,7 +1,12 @@
 package com.example;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Student{
     
+    @Id
     int id;
     String name;
     int marks;
@@ -24,7 +29,12 @@ public class Student{
     public void setMarks(int marks) {
         this.marks = marks;
     }
+    @Override
+    public String toString() {
+        return "Student [id=" + id + ", name=" + name + ", marks=" + marks + "]";
+    }
 
+    
 
    
 }
