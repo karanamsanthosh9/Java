@@ -1,11 +1,11 @@
 package com.example;
 
-import java.lang.Thread.State;
+// import java.lang.Thread.State;
 import java.sql.*;
 
-import javax.swing.plaf.basic.BasicInternalFrameTitlePane.RestoreAction;
+// import javax.swing.plaf.basic.BasicInternalFrameTitlePane.RestoreAction;
 
-import org.postgresql.core.SqlCommand;
+// import org.postgresql.core.SqlCommand;
 
 /*
  * steps in jdbc:
