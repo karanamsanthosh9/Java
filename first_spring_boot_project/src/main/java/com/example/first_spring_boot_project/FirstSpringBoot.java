@@ -8,7 +8,7 @@ public class FirstSpringBoot {
 
 	public static void main(String[] args) {
 		SpringApplication.run(FirstSpringBoot.class, args);
-		System.out.println("Hello world from SpringBoot 2");
+		System.out.println("Hello world from SpringBoot day - 2");
 	}
 
 }
