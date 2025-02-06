@@ -11,6 +11,7 @@ public class FirstSpringBoot {
 	public static void main(String[] args) {
 		SpringApplication.run(FirstSpringBoot.class, args);
 		System.out.println("Hello world from SpringBoot day - 222");
+		
 		String s = "    Hello world from SpringBoot day - 2" ;
 		// String s = "";
 		System.out.println(s);
