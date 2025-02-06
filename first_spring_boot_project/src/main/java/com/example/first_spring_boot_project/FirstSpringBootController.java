@@ -9,6 +9,6 @@ public class FirstSpringBootController {
     @RequestMapping(value="/")
     public String index()
     {
-        return "testing first application using controller...now modifying";
+        return "Welcome to First spring boot application";
     }
 }
