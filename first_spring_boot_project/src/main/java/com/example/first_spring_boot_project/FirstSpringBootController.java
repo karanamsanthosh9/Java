@@ -9,6 +9,7 @@ public class FirstSpringBootController {
     @RequestMapping(value="/")
     public String index()
     {
-        return "Welcome to First spring boot application";
+        System.out.println("request received");
+        return "Welcome to First spring boot application java project";
     }
 }
