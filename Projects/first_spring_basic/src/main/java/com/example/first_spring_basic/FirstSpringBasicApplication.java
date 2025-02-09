@@ -1,7 +1,7 @@
 package com.example.first_spring_basic;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+// import org.springframework.boot.SpringApplication;
+// import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 // @SpringBootApplication
 public class FirstSpringBasicApplication {
