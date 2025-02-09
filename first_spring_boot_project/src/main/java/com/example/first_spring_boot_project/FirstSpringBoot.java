@@ -20,7 +20,6 @@ public class FirstSpringBoot {
 		for(String a : st)
 			System.out.println(a);
 	}
-
 }
 
 
