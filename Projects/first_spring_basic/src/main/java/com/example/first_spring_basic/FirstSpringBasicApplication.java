@@ -8,7 +8,7 @@ public class FirstSpringBasicApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(FirstSpringBasicApplication.class, args);
-
+		System.out.println("Hello world");
 	}
 
 }
