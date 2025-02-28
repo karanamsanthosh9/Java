@@ -1,4 +1,13 @@
 
 @SpringBootApplication -> The entry point of the spring boot application is the class contains the main method.
-@EnableAutoConfiguration ->
-For example, if MySQL database is on your classpath, but you have not configured any database connection, then Spring Boot auto-configures an in-memory database
+@EnableAutoConfiguration -> To enable auto configuration.....
+  For example, if MySQL database is on your classpath, but you have not configured any database connection, 
+  then Spring Boot auto-configures an in-memory database
+@ComponentScan annotation -> Spring Boot automatically scans all the components included in the project by using 
+
+
+
+
+
+
+
