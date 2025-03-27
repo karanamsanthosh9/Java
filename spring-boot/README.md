@@ -18,3 +18,16 @@ spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 
 server.port=9090
+
+#  application yml h2 db
+---------------------------
+spring:
+    application:
+        name:   jparestapi
+    datasource:
+        url: jdbc:h2:mem:mydb
+        username: sa
+        password: password
+        driver-class-name: org.h2.Driver
+
+        
